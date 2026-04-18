@@ -29,7 +29,7 @@ Database changed
 | test               |
 +--------------------+
 ```
-## Step 3: Create DEPARTMENT Table
+## 3: Create DEPARTMENT Table
 ```sql
 CREATE TABLE DEPARTMENT (
      DEPTNO INT(2) PRIMARY KEY,
@@ -40,7 +40,7 @@ CREATE TABLE DEPARTMENT (
 ```
 Query OK, 0 rows affected 
 ```
-## Step 4: Create EMPLOYEE Table 
+## 4: Create EMPLOYEE Table 
 ```sql
 CREATE TABLE EMPLOYEE (
      EMPNO INT(4) PRIMARY KEY,
@@ -60,7 +60,7 @@ CREATE TABLE EMPLOYEE (
 ```
 Query OK, 0 rows affected
 ```
-## Step 5: INSERT values 
+## 5: INSERT values 
 ```sql
 INSERT INTO DEPARTMENT VALUES 
 (10, 'RESEARCH'),
@@ -93,6 +93,7 @@ INSERT INTO EMPLOYEE VALUES
  ```
  Query OK, 14 rows affected (0.014 sec)
 Records: 14  Duplicates: 0  Warnings: 0
+```
 ##  6: Show Tables
 ```sql
 SELECT * FROM EMPLOYEE;
@@ -134,8 +135,7 @@ SELECT * FROM DEPARTMENT;
 +--------+------------+
 4 rows in set (0.001 sec)
 ```
-```
-## Step 7: Create Employee_master Table 
+## 7: Create Employee_master Table 
 ```sql
 CREATE TABLE EMPLOYEE_MASTER AS
     SELECT * FROM EMPLOYEE;
@@ -145,7 +145,7 @@ CREATE TABLE EMPLOYEE_MASTER AS
 Query OK, 14 rows affected (0.028 sec)
 Records: 14  Duplicates: 0  Warnings: 0
 ```
-## Step 8: Delete from Employee_master
+## 8: Delete from Employee_master
 ```sql
 DELETE FROM EMPLOYEE_MASTER
      WHERE DEPTNO = 10;
@@ -154,7 +154,7 @@ DELETE FROM EMPLOYEE_MASTER
 ```
 Query OK, 1 row affected 
 ```
-## Step 9: Update from Employee_master
+## 9: Update from Employee_master
 ```sql
  UPDATE EMPLOYEE_MASTER
      SET SAL = SAL + (SAL * 0.10)
@@ -165,7 +165,7 @@ Query OK, 1 row affected
 Query OK, 6 rows affected 
 Rows matched: 6  Changed: 6  Warnings: 0
 ```
-## Step 10: Alter Table Employee_master
+## 10: Alter Table Employee_master
 ```sql
 ALTER TABLE EMPLOYEE_MASTER
      MODIFY SAL DECIMAL(10,2);
@@ -175,7 +175,7 @@ ALTER TABLE EMPLOYEE_MASTER
 Query OK, 13 rows affected (0.088 sec)
 Records: 13  Duplicates: 0  Warnings: 0
 ```
-## Step 11: Drop Employee_master 
+## 11: Drop Employee_master 
 ```sql
 DROP TABLE EMPLOYEE_MASTER;
 ```
